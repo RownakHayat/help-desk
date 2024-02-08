@@ -387,36 +387,53 @@
 				</div>
 
 				<div class="col-md-12"> 
-                    <fieldset class="customLegend row">
-                        <legend 
-						style="font-size:16px;font-weight: 600;color:#000;text-transform: uppercase">
-						Add Test with Result </legend>
+					<div id="repeater">
+						<!-- Repeater Heading -->
+						  <div class="card">
+							<div class="card-body">
+								<h5 class="mb-0 text-center">Ticket Info Create</h5>
+								<div class="d-flex align-items-center justify-content-between">
+									<button class="btn btn-primary repeater-add-btn px-4">
+										<i class="fadeIn animated bx bx-plus"></i>
+									</button>
+								</div>
+							</div>
+						  </div>
+						
+						<!-- Repeater Items -->
+						<div class="items" data-group="test">
+							<!-- <div class="card">
+								<div class="card-body"> -->
+									<!-- Repeater Content -->
+									<!-- <button class="btn btn-primary repeater-add-btn px-4">
+										<i class="fadeIn animated bx bx-plus"></i>
+									</button> -->
+									<div class="item-content">
+										<div class="mb-3">
+											<label for="inputName1" class="form-label">Name</label>
+											<input type="text" class="form-control" id="inputName1" placeholder="Name" data-name="name">
+										</div>
+										<div class="mb-3">
+											<label for="inputEmail1" class="form-label">Email</label>
+											<input type="text" class="form-control" id="inputEmail1" placeholder="Email" data-skip-name="true" data-name="email">
+										</div>
+									</div>
+									<!-- Repeater Remove Btn -->
+									<div class="repeater-remove-btn">
+										<button class="btn btn-danger remove-btn px-4">
+											<i class="fadeIn animated bx bx-minus"></i>
+										</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
 
-                        <div class="list-item" id="addMoreItem" style="margin: 0px auto">
-                            <div class="row align-items-center">
-                                <div class="col-md-4">
-                                    <label for="patient_id">Ticket Info</label>
-									<input type="text" class="form-control">
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="name">Result</label>
-                                    <input type="text" class="form-control" value="">
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="file"  class="form-control" >
-                                </div>
-                                <div class="col-md-2">
-									<button class="btn-success rounded p-1 px-2"><i class="fadeIn animated bx bx-plus"></i></button>
-                                  <button class="btn-danger rounded p-1 px-2"><i class="fadeIn animated bx bx-minus"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                    
                     <div class="form-row">
                         <div class="col" style="margin-top: 29px !important;">
                             <input type="submit" class="btn btn-success" value="Save">
-                            <input type="button" class="btn btn-warning " value="Edit " >
+                            <!-- <input type="button" class="btn btn-warning " value="Edit " > -->
                         </div>
                     </div>
                 </div>
@@ -444,6 +461,14 @@
 	<script src="../assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
 	<script src="../assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 	<script src="../assets/js/index.js"></script>
+	<script src="../assets/plugins/form-repeater/repeater.js"></script>
+	<script>
+        /* Create Repeater */
+        $("#repeater").createRepeater({
+            showFirstItemToDefault: true,
+        });
+    </script>
+	<!--app JS-->
 	<script>
 		new PerfectScrollbar(".app-container")
 	</script>
