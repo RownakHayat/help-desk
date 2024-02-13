@@ -299,88 +299,180 @@
 								</tbody>
 							</table>
 						</div>
+						<hr>
 						<div class="permission p-2 my-4">
-							<div class="row">
-								<div class="col-md-6 col-sm-12">
-									<h6 class="mb-0 text-uppercase text-gray">Admin</h6>
-									<hr>
-									<div class="card">
-										<div class="card-body">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
-												<label class="form-check-label" for="flexCheckDefault">
-												Default checkbox
-												</label>
+							<h5 class="text-center">User & Security</h5>
+							<div class="form-check">
+								<input onchange="selectAllChkbox()" class="form-check-input" type="checkbox" value="" id="checkboxAllUser" >
+								<label class="form-check-label checkDefault" for="flexCheckDefault">
+								Select All
+								</label>
+							</div>
+							<div class="border-2 border-gray border p-4 card">
+								<div class="row my-5">
+									<div class="col-md-6 col-sm-12">
+										<div class="roll-selectAll">
+											<div class="">
+												<h6 class="mb-2 text-uppercase text-gray">Roll</h6>
+												<div  id="btn_all" class="form-check">
+													<input onchange="selectAllChkboxes()" 
+													class="form-check-input chkall" type="checkbox" value="" id="checkAll" >
+													<label class="form-check-label" for="checkAll">
+													Select All
+													</label>
+												</div>
 											</div>
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-												<label class="form-check-label" for="flexCheckChecked">
-												Checked checkbox
-												</label>
+											<div class="card">
+												<div class="card-body">
+													<div class="form-check">
+														<input class="form-check-input chkall selctOption_roll" type="checkbox" value="" id="rollchk1">
+														<label class="form-check-label" for="rollchk1">
+														Default checkbox
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input chkall selctOption_roll" type="checkbox"  value="" id="rollchk2" >
+														<label class="form-check-label" for="rollchk2">
+														Checked checkbox
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input chkall selctOption_roll" type="checkbox" value="" id="rollchk3" >
+														<label class="form-check-label" for="rollchk3">
+														Checked checkbox
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input chkall selctOption_roll" type="checkbox" value="" id="rollchk4" >
+														<label class="form-check-label" for="rollchk4">
+														Checked checkbox
+														</label>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6 col-sm-12">
-									<h6 class="mb-0 text-uppercase text-gray">Member</h6>
-									<hr>
-									<div class="card">
-										<div class="card-body">
+									<div class="col-md-6 col-sm-12">
+										<div class="">
+											<h6 class="mb-2 text-uppercase text-gray">Permission</h6>
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-												Default checkbox
-												</label>
-											</div>
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-												<label class="form-check-label" for="flexCheckChecked">
-												Checked checkbox
+												<input onchange="selectAllChkboxesPer()" class="form-check-input chkall" type="checkbox" value="" id="chkAllPer">
+												<label class="form-check-label chkall" for="flexCheckDefault">
+												Select All
 												</label>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-12">
-									<h6 class="mb-0 text-uppercase text-gray">Employ</h6>
-									<hr>
-									<div class="card">
-										<div class="card-body">
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-												<label class="form-check-label" for="flexCheckDefault">
-												Default checkbox
-												</label>
-											</div>
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-												<label class="form-check-label" for="flexCheckChecked">
+										<div class="card">
+											<div class="card-body">
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_per" type="checkbox" value="" id="flexCheckDefault">
+													<label class="form-check-label" for="flexCheckDefault">
+													Default checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_per" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
 													Checked checkbox
-												</label>
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_per" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+													Checked checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_per" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+													Checked checkbox
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-md-6 col-sm-12">
-									<h6 class="mb-0 text-uppercase text-gray">Client</h6>
-									<hr>
-									<div class="card">
-										<div class="card-body">
+									<div class="col-md-6 col-sm-12">
+										<div class="">
+											<h6 class="mb-2 text-uppercase text-gray">User</h6>
 											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+												<input onchange="selectAllChkboxesUser()" class="form-check-input chkall" type="checkbox" value="" id="chkAllUser">
 												<label class="form-check-label" for="flexCheckDefault">
-												Default checkbox
+												Select All
 												</label>
 											</div>
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-												<label class="form-check-label" for="flexCheckChecked">
-												Checked checkbox
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_user" type="checkbox" value="" id="flexCheckDefault">
+													<label class="form-check-label" for="flexCheckDefault">
+													Default checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_user" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+														Checked checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_user" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+														Checked checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_user" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+														Checked checkbox
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6 col-sm-12">
+										<div class="">
+											<h6 class="mb-2 text-uppercase text-gray">Client</h6>
+											<div  class="form-check">
+												<input onchange="selectAllChkboxesClint()" class="form-check-input chkall" type="checkbox" value="" id="checkAllClint" >
+												<label class="form-check-label" for="flexCheckDefault">
+												Select All
 												</label>
+											</div>
+										</div>
+										<div class="card">
+											<div class="card-body">
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_clint" type="checkbox" value="" id="flexCheckDefault">
+													<label class="form-check-label" for="flexCheckDefault">
+													Default checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_clint" type="checkbox" value="" id="flexCheckChecked">
+													<label class="form-check-label" for="flexCheckChecked">
+													Checked checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_clint" type="checkbox" value="" id="flexCheckChecked">
+													<label class="form-check-label" for="flexCheckChecked">
+													Checked checkbox
+													</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input chkall selctOption_clint" type="checkbox" value="" id="flexCheckChecked" >
+													<label class="form-check-label" for="flexCheckChecked">
+													Checked checkbox
+													</label>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+							</div>
+							<div class="">
+								<button type="submit" class="btn btn-primary">Save</button>
 							</div>
 						</div>
 					</div>
@@ -431,11 +523,12 @@
 				.appendTo( '#example2_wrapper .col-md-6:eq(0)' );
 		} );
 	</script>
+	 <script src="../assets/js/permission.js"></script>
 	<!--app JS-->
+
 	<script src="../assets/js/app.js"></script>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 
-<!-- Mirrored from codervent.com/rocker/demo/vertical/table-datatable.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jan 2024 05:01:13 GMT -->
 </html>
