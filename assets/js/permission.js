@@ -33,3 +33,18 @@ function selectAllChkboxesClint(){
         $('.selctOption_clint').attr('checked', false);
     }
 }
+
+
+const divContainer = document.querySelector('#view_security');
+let isClicked = true;
+
+let viewsOrHide = function(){
+    if(isClicked){
+        divContainer.style.display = 'block';
+        isClicked = false;
+    }else{
+        divContainer.style.display = 'none';
+        isClicked = true;
+    }
+   
+}

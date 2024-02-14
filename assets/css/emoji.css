@@ -4,3 +4,10 @@
 .member-img{
     width: 35%;
 }
+.view-img{
+    width: 4%;
+    cursor: pointer;
+}
+#view_security{
+    display: none;
+}
